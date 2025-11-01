@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquid Glass Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <canvas id="liquid-canvas" aria-hidden="true"></canvas>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <main class="page">
+      <header class="hero">
+        <div class="hero__glass">
+          <p class="badge">Liquid Glass UI</p>
+          <h1>The fluid future of interface design</h1>
+          <p class="lede">
+            Liquid glass balances the softness of organic motion with the precision of high-clarity glass panels.
+            This prototype highlights how layered refractions, frosted light, and liquid gradients can build a tactile digital surface.
+          </p>
+          <div class="cta-group">
+            <button class="btn btn--primary">Explore the palette</button>
+            <button class="btn btn--ghost">See the motion system</button>
+          </div>
+        </div>
+        <div class="hero__stats">
+          <article class="stat-card">
+            <h2>Refraction</h2>
+            <p>Dynamic blur responds to pointer proximity, simulating a glass lens skimming across liquid.</p>
+          </article>
+          <article class="stat-card">
+            <h2>Viscosity</h2>
+            <p>Soft body ripples keep motion cohesive, so components appear to float in the same medium.</p>
+          </article>
+          <article class="stat-card">
+            <h2>Clarity</h2>
+            <p>High-contrast typography punctures through fogged layers for comfortable readability.</p>
+          </article>
+        </div>
+      </header>
+
+      <section class="panel-grid" aria-label="Design tokens">
+        <article class="panel panel--glass">
+          <h3>Color wells</h3>
+          <p>Use saturated gradients that drift subtly to mimic liquid dispersion.</p>
+          <div class="swatch-row">
+            <span class="swatch" data-name="Hyperviolet"></span>
+            <span class="swatch" data-name="Quasar Blue"></span>
+            <span class="swatch" data-name="Infra Coral"></span>
+            <span class="swatch" data-name="Polar Mint"></span>
+          </div>
+        </article>
+        <article class="panel panel--glass">
+          <h3>Depth script</h3>
+          <p>Layer blur tokens to simulate parallax and refraction shifts.</p>
+          <ul class="token-list">
+            <li><strong>mist-4</strong> – 8px blur for touch targets</li>
+            <li><strong>mist-8</strong> – 16px blur for cards &amp; tooltips</li>
+            <li><strong>mist-16</strong> – 32px blur for backdrop plates</li>
+          </ul>
+        </article>
+        <article class="panel panel--glass">
+          <h3>Motion viscosities</h3>
+          <p>Ease curves are designed to feel like liquid flexing behind glass.</p>
+          <div class="motion-pill" data-ease="cubic-bezier(0.22, 1, 0.36, 1)">Overshoot flow</div>
+          <div class="motion-pill" data-ease="cubic-bezier(0.37, 0, 0.63, 1)">Viscous settle</div>
+        </article>
+      </section>
+    </main>
+
+    <script src="src/app.js" type="module"></script>
+  </body>
+</html>
