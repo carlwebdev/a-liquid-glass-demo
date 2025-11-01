@@ -12,8 +12,21 @@
   <body>
     <canvas id="liquid-canvas" aria-hidden="true"></canvas>
     <div class="noise-overlay" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="#overview">Liquid Glass</a>
+        <nav aria-label="Primary">
+          <ul class="site-nav">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#tokens">Design tokens</a></li>
+            <li><a href="#styleguide">Styleguide</a></li>
+          </ul>
+        </nav>
+        <a class="spec-link" href="#styleguide">Download spec</a>
+      </div>
+    </header>
     <main class="page">
-      <header class="hero">
+      <header class="hero" id="overview">
         <div class="hero__glass">
           <p class="badge">Liquid Glass UI</p>
           <h1>The fluid future of interface design</h1>
@@ -42,7 +55,7 @@
         </div>
       </header>
 
-      <section class="panel-grid" aria-label="Design tokens">
+      <section class="panel-grid" id="tokens" aria-label="Design tokens">
         <article class="panel panel--glass">
           <h3>Color wells</h3>
           <p>Use saturated gradients that drift subtly to mimic liquid dispersion.</p>
@@ -69,7 +82,58 @@
           <div class="motion-pill" data-ease="cubic-bezier(0.37, 0, 0.63, 1)">Viscous settle</div>
         </article>
       </section>
+
+      <section class="styleguide" id="styleguide" aria-label="Styleguide">
+        <div class="styleguide__intro">
+          <h2>Interface styleguide</h2>
+          <p>
+            Core guidance on typography, component spacing, and interaction detail ensures that every layer of the
+            experience feels consistently fluid.
+          </p>
+        </div>
+        <div class="styleguide__grid">
+          <article class="styleguide-card">
+            <h3>Typography rhythm</h3>
+            <p>
+              Pair bold headlines at 1.1 line height with body text set to 1.6 to keep the glass panels airy without
+              losing focus.
+            </p>
+            <div class="type-stack">
+              <span class="type-sample type-sample--display">H1 – Manrope 64</span>
+              <span class="type-sample">Body – Manrope 18</span>
+              <span class="type-sample type-sample--caption">Caption – Manrope 14</span>
+            </div>
+          </article>
+          <article class="styleguide-card">
+            <h3>Spacing fluidity</h3>
+            <p>
+              Structure layouts with an 8px base grid, expanding to 24px and 48px steps for macro spacing to mirror
+              liquid tension.
+            </p>
+            <ul class="spacing-list">
+              <li><strong>8px</strong> micro control targets</li>
+              <li><strong>24px</strong> component gutters</li>
+              <li><strong>48px</strong> section breathing room</li>
+            </ul>
+          </article>
+          <article class="styleguide-card">
+            <h3>Interaction polish</h3>
+            <p>
+              Layer light halos and motion blur on interactive states so buttons feel suspended above the liquid plane.
+            </p>
+            <div class="interaction-demo">
+              <button class="btn btn--primary">Primary hover</button>
+              <button class="btn btn--ghost">Ghost hover</button>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <p>© 2024 Liquid Glass Interface Lab. Crafted for experimental interface exploration.</p>
+      <a href="#overview">Back to top</a>
+    </footer>
 
     <script src="src/app.js" type="module"></script>
   </body>
